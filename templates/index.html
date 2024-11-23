@@ -32,10 +32,11 @@
 
     <canvas id="neuralCanvas"></canvas>
 
-    
+
     <!-- Profile -->
     <div id="header" class="jumbotron text-center">
-        <img src="https://static.vecteezy.com/system/resources/previews/004/274/186/non_2x/person-icon-user-interface-icon-silhouette-of-man-simple-symbol-a-glyph-symbol-in-your-web-site-design-logo-app-ui-webinar-video-chat-ect-vector.jpg" alt="Profile Picture" class="rounded-circle my-2" width="20%" height="20%">
+        <img src="https://static.vecteezy.com/system/resources/previews/004/274/186/non_2x/person-icon-user-interface-icon-silhouette-of-man-simple-symbol-a-glyph-symbol-in-your-web-site-design-logo-app-ui-webinar-video-chat-ect-vector.jpg"
+            alt="Profile Picture" class="rounded-circle my-2" width="20%" height="20%">
         <h1>Eduardo Velazquez Sosa</h1>
         <p>Data Scientist Jr</p>
         <a href="/static/file/cv.pdf" class="btn btn-dark">Download CV</a>
@@ -68,9 +69,7 @@
     </section>
 
     <section id="trayectory" class="container p-3">
-
         <h3>Trayectoria</h3>
-
         <div class="container p-2 my-2">
             <h5>Education <i class="fas fa-graduation-cap education-icon mx-3"></i></h5>
             <p>Mi educacion, incluyendo lo aprendido en cada uno de ellas</p>
@@ -92,11 +91,8 @@
                                 </ul>
                             </div>
                         </div>
-
-
                 </div>
                 {% endfor %}
-
 
 
                 <!-- Future cards go here -->
@@ -134,17 +130,7 @@
                 </ul>
             </section>
 
-            <!-- contact -->
-            <section id="contact">
-                <h2>Contacto</h2>
-                <ul>
-                    <li><strong>Correo:</strong> {{ cv.contacto.correo }}</li>
-                    <li><strong>Teléfono:</strong> {{ cv.contacto.telefono }}</li>
-                    <li><strong>LinkedIn:</strong> <a href="{{ cv.contacto.linkedin }}">{{ cv.contacto.linkedin }}</a>
-                    </li>
-                    <li><strong>GitHub:</strong> <a href="{{ cv.contacto.github }}">{{ cv.contacto.github }}</a></li>
-                </ul>
-            </section>
+
 
         </div>
 
@@ -163,5 +149,26 @@
 
 
 </body>
+<!-- contact -->
+<footer class="bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <span class="copyright">Copyright © Eduardo Sosa 2024</span>
+            </div>
+            <div class="col-md-4">
+                <a href=""><img src="/static/icons/email.png" alt="email"></a>
+                <a href="+529983177355"><img src="/static/icons/whatsapp.png" alt="number"></a>
+                <a href="https://www.linkedin.com/in/eduardo-velazquez-sosa-b1ab09268"><img
+                        src="/static/icons/linkedin.png" alt="linkedin"></a>
+                <a href="https://github.com/GO1T3R"><img src="/static/icons/github.png" alt="github"></a>
+            </div>
+            <div class="col-md-4">
+                <span>Contactame si tiene salguna pregunta.</span>
+
+            </div>
+        </div>
+    </div>
+</footer>
 
 </html>

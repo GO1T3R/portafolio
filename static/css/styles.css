@@ -20,3 +20,21 @@ body {
     top: 0;
     z-index: 10;
 }
+
+.col-md-4{
+    display: flex;
+    align-items: center;
+}
+
+.row img {
+    height: 50px;
+    width: 50px;
+    margin: 10px;
+}
+
+footer {
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    
+}
