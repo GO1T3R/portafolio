@@ -82,17 +82,11 @@ function animate() {
             const distance = Math.hypot(dx, dy);
 
             if (distance < 100) {
-                const dispersionStrength = (100 - distance) / 100; // Fuerza de dispersión
+                // Empujar los nodos lejos del mouse
+                const pushStrength = (100 - distance) / 10; // Fuerza de empuje
 
-                // Aplicar fuerza de dispersión suavemente
-                node.dispersionFactor += (dispersionStrength - node.dispersionFactor) * 0.1; // Desaceleración de dispersión
-
-                node.x = node.originalX + dx * node.dispersionFactor; // Desplazamiento lento
-                node.y = node.originalY + dy * node.dispersionFactor;
-            } else {
-                node.dispersionFactor = 0; // Resetear dispersión si el mouse está lejos
-                node.x += (node.originalX - node.x) * 0.05; // Volver lentamente a la posición original
-                node.y += (node.originalY - node.y) * 0.05;
+                node.x += (dx / distance) * pushStrength; 
+                node.y += (dy / distance) * pushStrength;
             }
         }
     });

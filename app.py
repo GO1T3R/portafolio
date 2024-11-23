@@ -16,8 +16,7 @@ def home():
         'educacion': [
             {'titulo': 'Ingeniería en Sistemas Computacionales', 'institucion': 'Universidad Aztlan', 'años': '2021-2024', 'resumen': 'En la carrera adquiere la pasion por las estadisticas y el amor por la ciencia de datos, por lo que adquiere una base solida.'},
             {'titulo': 'Diplomado en Desarrollo Web', 'institucion': 'Universidad Aztlan', 'años': '2024', 'resumen':'Realice varios proyecto en el que destaco la creacion de una Tienda Online de Ropa utilizando tecnología comoHTML/CSS, JavaScript, PHP, SQL.'},
-            {'titulo': 'Maestria en Analisis e Interpretacion de Datos Digitales', 'institucion': 'Universidad Oriente', 'años': 'Estudiante', 'resumen':'con motivo de mi superacion personal y a'}
-            
+            {'titulo': 'Maestria en Analisis e Interpretacion de Datos Digitales', 'institucion': 'Universidad Oriente', 'años': 'Estudiante', 'resumen':'con motivo de mi superacion personal y a'} 
         ],
         'habilidades': ['Python', 'SQL', 'Pandas', 'Automatización', 'Análisis de Datos', 'Flask'],
         'contacto': {
@@ -25,7 +24,12 @@ def home():
             'telefono': '9983177355',
             'linkedin': 'https://linkedin.com/in/eduardo-velazquez-sosa-b1ab09268',
             'github': 'https://github.com/go1t3r'
-        }
+        },
+        'proyectos':[
+            {'imagen': 'static/img/', 'titulo':'Analisis de delitos en el aeropuerto', 'descripcion':'limpieza y analisis de los datos que recopile durante los a los años en el aeropuerto de cancun', 'link':'www.proyecto.com'},
+            {'imagen': 'static/img/', 'titulo':'Analisis de delitos en el aeropuerto', 'descripcion':'limpieza y analisis de los datos que recopile durante los a los años en el aeropuerto de cancun', 'link':'www.proyecto.com'},
+            {'imagen': 'static/img/', 'titulo':'Analisis de delitos en el aeropuerto', 'descripcion':'limpieza y analisis de los datos que recopile durante los a los años en el aeropuerto de cancun', 'link':'www.proyecto.com'}
+        ]
     }
     return render_template('index.html', cv=cv_data)
 
