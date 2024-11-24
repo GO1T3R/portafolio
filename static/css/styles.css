@@ -1,37 +1,94 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+
+:root {
+    --UI-UX-1: #F25E7A;
+    --UI-UX-2: #E2F26B;
+    --UI-UX-3: #B4BF5E;
+    --UI-UX-4: #F2F2F2;
+    --UI-UX-5: #0D0D0D;
+  }
+
+
 html {
     font-family: "Poppins", sans-serif;
     font-weight: 100;
     font-style: normal;
 }
 
+/* inicio datos de cv */
+.jumbotron {
+    height: 700px;
+}
+
+#header {
+    height: 100vh; /* Ocupa toda la altura de la ventana */
+    display: flex;
+    align-items: center; /* Centrar verticalmente */
+    justify-content: center; /* Centrar horizontalmente */
+
+  }
+  
+  /* Opcional: Estilo del contenido */
+  #header .content {
+    text-align: center; /* Centrar texto dentro del contenido */
+  }
+  
+
 canvas {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 350px; /* Fijamos altura del canvas */
+    height: 100vh; /* Fijamos altura del canvas normal 350px*/
     z-index: -1; /* Lo enviamos al fondo */
 }
 
 /* Ajustar estilos de body y secciones */
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family:  "Poppins", serif;
 }
 
+/* Barra de navegacion */
 
 .navbar {
-    position: sticky;
-    top: 0;
-    z-index: 10;
+    text-align: center;
 }
+
+.navbar-brand {
+    margin-right: auto; /* Alinear la marca a la izquierda */
+    margin-left: auto; /* Centrará si no hay elementos adicionales */
+    font-size: 1.5rem; /* Opcional: Ajustar tamaño de la marca */
+}
+
+.navbar-nav {
+    display: flex;
+    justify-content: center; /* Centra las opciones del menú */
+    width: 100%; /* Asegura que ocupe el ancho completo */
+}
+
+.nav-link {
+    margin: 0 15px; /* Espaciado entre los enlaces */
+    color: #333; /* Color del texto */
+    text-decoration: none;
+}
+
+.nav-link:hover {
+    color: var(--UI-UX-1); /* Cambiar color al pasar el mouse */
+}
+
+
 
 .col-md-4{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.row .picture_profile{
+    height: 100%;
+    width: 100%;
+    margin: 10px;
 }
 
 .row img {
@@ -47,3 +104,34 @@ footer {
     align-items: center;
     
 }
+
+/* texto Eduardo Velazquez Sosa */
+.text-color {
+    color: var(--UI-UX-1);
+    font-weight: bold;
+
+}
+/* texto */
+.justify-text {
+    text-align: justify;
+}
+
+
+/* Botones de CV */
+a.btn {
+    color: #2A8C82; /* Color del texto */
+    background-color: transparent; /* Fondo transparente para resaltar el texto */
+    border: 2px solid #2A8C82; /* Borde con el mismo color */
+    padding: 10px 15px;
+    text-decoration: none;
+   
+    border-radius: 5px;
+    transition: all 0.3s ease; /* Transición para suavizar los efectos */
+}
+
+a.btn:hover {
+    color: white; /* Cambia el texto a blanco */
+    background-color: #2A8C82; /* Fondo sólido del mismo color */
+    border-color: #2A8C82; /* Asegura que el borde no cambie */
+}
+

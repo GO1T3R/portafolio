@@ -8,6 +8,7 @@ def home():
     cv_data = {
         'nombre': 'Eduardo Velazquez Sosa',
         'puesto': 'Aspirante a Data Scientist',
+        'foto':'https://png.pngtree.com/thumb_back/fw800/background/20221108/pngtree-traveler-man-enjoying-by-scenic-of-mountains-person-young-scenics-photo-image_40834320.jpg',
         'resumen': 'Ingeniero en Sistemas Computacionales con habilidades en Python, HTML/CSS, y fundamentos de Ciencia de Datos, actualmente en formación en Científico de Datos, con cinco años de experiencia en la secretaria de marina, en donde desarrollado una fuerte ética de trabajo, disciplina y habilidades para resolver problemas bajo presión. Busco mi primera oportunidad en el campo de la Ciencia de Datos, donde pueda aplicar y expandir mis conocimientos técnicos en un entorno colaborativo.',
         'experiencia': [
             {'puesto': 'Militar', 'empresa': 'Marina de México', 'años': '2017-2022'}

@@ -12,6 +12,26 @@ const connections = [];
 const nodeCount = 30;
 let mouse = { x: null, y: null };
 
+// Ajustar para pantallas de alta resolución
+function adjustCanvasForHighDPI() {
+    const dpi = window.devicePixelRatio || 1; // Detecta el DPI de la pantalla
+    const computedStyle = getComputedStyle(canvas); // Obtiene el tamaño visual del canvas
+
+    // Mantén el tamaño visual (CSS)
+    const width = parseFloat(computedStyle.getPropertyValue('width'));
+    const height = parseFloat(computedStyle.getPropertyValue('height'));
+
+    // Ajusta la resolución interna
+    canvas.width = width * dpi;
+    canvas.height = height * dpi;
+
+    // Escala el contexto para corregir la proporción de píxeles
+    ctx.scale(dpi, dpi);
+}
+
+// Llamar a la función para ajustar el canvas
+adjustCanvasForHighDPI();
+
 // Crear nodos
 for (let i = 0; i < nodeCount; i++) {
     nodes.push({
