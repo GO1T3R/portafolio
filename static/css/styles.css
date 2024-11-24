@@ -51,26 +51,22 @@ body {
 }
 
 /* Barra de navegacion */
-
 .navbar {
     text-align: center;
 }
-
 .navbar-brand {
-    margin-right: auto; /* Alinear la marca a la izquierda */
-    margin-left: auto; /* Centrará si no hay elementos adicionales */
-    font-size: 1.5rem; /* Opcional: Ajustar tamaño de la marca */
+    margin-right: auto; 
+    margin-left: auto; 
+    font-size: 1.5rem; 
 }
-
 .navbar-nav {
     display: flex;
     justify-content: center; /* Centra las opciones del menú */
-    width: 100%; /* Asegura que ocupe el ancho completo */
+    width: 100%; /*ancho completo */
 }
-
 .nav-link {
     margin: 0 15px; /* Espaciado entre los enlaces */
-    color: #333; /* Color del texto */
+    color: var(--UI-UX-5); /* Color del texto */
     text-decoration: none;
 }
 
