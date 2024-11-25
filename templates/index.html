@@ -10,17 +10,16 @@
 </head>
 
 <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: #FFFF">
-        <div class="container justify-content-center">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
             <a class="navbar-brand" href="#">Eduardo</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
                 aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                    <a class="nav-link" href="#about">Sobre mi</a>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav ms-auto"> <!-- Esta clase alinea a la derecha -->
+                    <a class="nav-link" href="#about">Sobre mí</a>
                     <a class="nav-link" href="#education">Mi trayectoria</a>
                     <a class="nav-link" href="#proyectos">Proyectos</a>
                     <a class="nav-link" href="#contact">Contacto</a>
@@ -66,24 +65,25 @@
 
     </section>
 
-    <!-- about -->
-    <section id="about" class="container p-3">
-        <h3>Sobre mi</h3>
-        <div class="row">
-            <div class="container col-md-6 p-3">
-                <h5>Personal</h5>
-                <p>{{ cv.resumen }}</p>
-            </div>
-            <div class="container col-md-6 p-3">
-                <h5>Habilidades</h5>
+    <!-- Habilidades -->
+    <section id="habilidades" class="container p-3">
+        <hr>
+        <h3 class="text-center">Habilidades</h3> <!-- Solo el título estará centrado -->
+        <div class="row justify-content-center p-3">
+            {% for habilidad in cv.habilidades %}
+            <div class="col-lg-4 col-md-6"> <!-- Alineación del texto a la derecha -->
+                <h5>{{ habilidad.keys() | list | first | capitalize }}</h5> <!-- Título de la categoría -->
                 <ul>
-                    {% for habilidad in cv.habilidades %}
-                    <li>{{ habilidad }}</li>
+                    {% for habilidad_nombre in habilidad.values() | list | first %}
+                    <li>{{ habilidad_nombre }}</li> <!-- Lista de habilidades -->
                     {% endfor %}
                 </ul>
             </div>
+            {% endfor %}
         </div>
+        <hr>
     </section>
+
 
     <section id="trayectory" class="container p-3">
         <h3>Trayectoria</h3>
@@ -110,62 +110,94 @@
                 {% endfor %}
             </div>
 
-            <!-- Proyect-->
-            <h3 id="proyectos">Proyectos<i class="fas fa-graduation-cap education-icon mx-3"></i></h3>
-            <p>Algunos de los proyectos que he realizado</p>
-            <div class="card-deck d-flex justify-content-between row p-3">
-                <!-- Card poryectos -->
-                {% for pro in cv.proyectos %}
-                <div class="col-lg-4 col-md-6">
-                    <section id="education">
-                        <div class="card education-card">
-                            <div class="card-body">
-                                <img src="{{ pro.img }}" alt="{{pro.titulo}}">
-                                <h5 class="card-title">{{ pro.titulo }}</h5>
-                                <p class="study-period">{{pro.descripcion }}</p>
-                                <ul>
-                                    <li class="card-text">{{ pro.link}}</li>
-                                </ul>
-                            </div>
-                        </div>
-                </div>
-                {% endfor %}
-            </div>
+            <!-- cursos -->
+            <div class="container p-2 my-2">
+                <h5>Cursos<i class="fas fa-graduation-cap education-icon mx-3"></i></h5>
+                <p>Algunos cursos en donde en reforzado mis conocimiento adquiridos</p>
+                <div class="card-deck d-flex justify-content-between row p-3">
 
-        </div>
-        <!-- experice -->
-        <div class="container p-2 my-2">
-            <section id="experice">
-                <h2>Experiencia</h2>
-                <ul>
-                    {% for exp in cv.experiencia %}
-                    <li>
-                        <strong>{{ exp.puesto }} en {{ exp.empresa }}</strong> ({{ exp.años }})
-                        <ul>
-                            <li><b>Encargado de Sistema de Captura de Información y Análisis Estadístico Delictivo:</b>
-                                <p>Responsabilidad en el manejo y análisis de datos delictivos, aplicando técnicas
-                                    estadísticas para la interpretación de tendencias y patrones en la información
-                                    recopilada.</p>
-                            </li>
-                            <li><b>Disciplina y Gestión:</b>
-                                <p>Aplicación de habilidades adquiridas en un curso de gestión administrativa para la
-                                    administración de recursos logísticos y la organización eficiente de tareas y
-                                    personal</p>
-                            </li>
-                            <li><b>Trabajo bajo precisión:</b>
-                                <p>Desempeño en situaciones de alta presión, con un enfoque
-                                    en la toma de decisiones de problemas.</p>
-                            </li>
-                            <li><b>Liderazgo y Trabajo en Equipo:</b>
-                                <p>Supervisión de en operaciones estratégicas, asegurando precisión y efectividad en el
-                                    cumplimiento de objetivos.</p>
-                            </li>
-                        </ul>
-                    </li>
+                    {% for cur in cv.cursos %}
+                    <div class="col-12 mb-3">
+                        <section id="education">
+                            <div class="card education-card">
+                                <div class="card-body">
+                                    <div class="curso-icon">
+                                        <h5 class="card-title">{{ cur.curso }}</h5>
+                                        <img src="{{ cur.icono }}" alt="{{ cur.curso }}" width="15">
+                                    </div>
+
+                                    <h6 class="degree-name">{{ cur.institucion }}</h6>
+                                    <p class="study-period">{{ cur.año }}</p>
+                                    <p>{{ cur.acerca }}</p>
+                                    <a href="{{ cur.link }}">Certificado</a>
+
+                                </div>
+                            </div>
+                    </div>
                     {% endfor %}
-                </ul>
-            </section>
-        </div>
+
+                </div>
+
+                <hr>
+                <!-- Proyect-->
+                <h3 id="proyectos">Proyectos<i class="fas fa-graduation-cap education-icon mx-3"></i></h3>
+                <p>Algunos de los proyectos que he realizado</p>
+                <div class="card-deck d-flex justify-content-between row p-3">
+                    <!-- Card poryectos -->
+                    {% for pro in cv.proyectos %}
+                    <div class="col-lg-4 col-md-6">
+                        <section id="education">
+                            <div class="card education-card">
+                                <div class="card-body">
+                                    <img src="{{ pro.img }}" alt="{{pro.titulo}}">
+                                    <h5 class="card-title">{{ pro.titulo }}</h5>
+                                    <p class="study-period">{{pro.descripcion }}</p>
+                                    <ul>
+                                        <li class="card-text">{{ pro.link}}</li>
+                                    </ul>
+                                </div>
+                            </div>
+                    </div>
+                    {% endfor %}
+                </div>
+
+            </div>
+            <!-- experice -->
+            <div class="container p-2 my-2">
+                <section id="experice">
+                    <h2>Experiencia</h2>
+                    <ul>
+                        {% for exp in cv.experiencia %}
+                        <li>
+                            <strong>{{ exp.puesto }} en {{ exp.empresa }}</strong> ({{ exp.años }})
+                            <ul>
+                                <li><b>Encargado de Sistema de Captura de Información y Análisis Estadístico
+                                        Delictivo:</b>
+                                    <p>Responsabilidad en el manejo y análisis de datos delictivos, aplicando técnicas
+                                        estadísticas para la interpretación de tendencias y patrones en la información
+                                        recopilada.</p>
+                                </li>
+                                <li><b>Disciplina y Gestión:</b>
+                                    <p>Aplicación de habilidades adquiridas en un curso de gestión administrativa para
+                                        la
+                                        administración de recursos logísticos y la organización eficiente de tareas y
+                                        personal</p>
+                                </li>
+                                <li><b>Trabajo bajo precisión:</b>
+                                    <p>Desempeño en situaciones de alta presión, con un enfoque
+                                        en la toma de decisiones de problemas.</p>
+                                </li>
+                                <li><b>Liderazgo y Trabajo en Equipo:</b>
+                                    <p>Supervisión de en operaciones estratégicas, asegurando precisión y efectividad en
+                                        el
+                                        cumplimiento de objetivos.</p>
+                                </li>
+                            </ul>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </section>
+            </div>
     </section>
 
 

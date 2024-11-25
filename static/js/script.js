@@ -29,8 +29,7 @@ function adjustCanvasForHighDPI() {
     ctx.scale(dpi, dpi);
 }
 
-// Llamar a la función para ajustar el canvas
-adjustCanvasForHighDPI();
+
 
 // Crear nodos
 for (let i = 0; i < nodeCount; i++) {
@@ -136,5 +135,6 @@ canvas.addEventListener('mouseleave', () => {
     mouse.y = null;
 });
 
-// Iniciar animación
+// llamar funciones
+adjustCanvasForHighDPI();
 animate();

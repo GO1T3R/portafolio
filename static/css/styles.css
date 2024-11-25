@@ -75,7 +75,7 @@ body {
 }
 
 
-
+/* Foto de perfil */
 .col-md-4{
     display: flex;
     align-items: center;
@@ -101,23 +101,33 @@ footer {
     
 }
 
+/* // cursos //*/
+.curso-icon {
+    display: flex;
+    align-items: center;
+}
+
 /* texto Eduardo Velazquez Sosa */
 .text-color {
     color: var(--UI-UX-1);
     font-weight: bold;
-
 }
+
 /* texto */
 .justify-text {
     text-align: justify;
 }
 
+a{
+    color: var(--UI-UX-1);
+}
+
 
 /* Botones de CV */
 a.btn {
-    color: #2A8C82; /* Color del texto */
+    color: var(--UI-UX-1); /* Color del texto */
     background-color: transparent; /* Fondo transparente para resaltar el texto */
-    border: 2px solid #2A8C82; /* Borde con el mismo color */
+    border: 2px solid var(--UI-UX-1); /* Borde con el mismo color */
     padding: 10px 15px;
     text-decoration: none;
    
@@ -127,7 +137,8 @@ a.btn {
 
 a.btn:hover {
     color: white; /* Cambia el texto a blanco */
-    background-color: #2A8C82; /* Fondo sólido del mismo color */
-    border-color: #2A8C82; /* Asegura que el borde no cambie */
+    background-color: var(--UI-UX-1); /* Fondo sólido del mismo color */
+    border-color: var(--UI-UX-1); /* Asegura que el borde no cambie */
 }
+
 
