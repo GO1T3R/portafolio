@@ -17,7 +17,7 @@ def home():
         'educacion': [
             {'titulo': 'Ingeniería en Sistemas Computacionales', 'institucion': 'Universidad Aztlan', 'años': '2021-2024', 'resumen': 'En la carrera adquiere la pasion por las estadisticas y el amor por la ciencia de datos, por lo que adquiere una base solida.'},
             {'titulo': 'Diplomado en Desarrollo Web', 'institucion': 'Universidad Aztlan', 'años': '2024', 'resumen':'Realice varios proyecto en el que destaco la creacion de una Tienda Online de Ropa utilizando tecnología comoHTML/CSS, JavaScript, PHP, SQL.'},
-            {'titulo': 'Maestria en Analisis e Interpretacion de Datos Digitales', 'institucion': 'Universidad Oriente', 'años': 'Estudiante', 'resumen':'con motivo de mi superacion personal y a'} 
+            {'titulo': 'Maestria en Analisis e Interpretacion de Datos Digitales', 'institucion': 'Universidad Oriente', 'años': 'Estudiante', 'resumen':'en proceso'} 
         ],
         'cursos':[
             {'curso':'Python','icono':'/static/icons/python.png', 'acerca':'Complete el curso de Python en Coderhouse, con temas como Django Framework y su MVT basado en Modelos, Vistas y Templates, asi como Git y Github.','año':'2022','instituto':'Coderhouse','certificado':'https://www.coderhouse.com/mx/certificados/62e6b89c998c0900242ccea8?lang='},
@@ -26,7 +26,7 @@ def home():
         'habilidades': [
             {'interpersonales':['Resolución de Problemas','Trabajo en Equipo', 'Autodidacta','Curiosidad']},
             {'tecnicas': ['Python', 'SQL', 'Pandas', 'Automatización', 'Análisis de Datos', 'Flask']},
-            {'idiomas':{'español':'Nativo','Ingles':'A2'}},
+            {'idiomas':{'Español - Nativo':'Nativo','Ingles - A2':'A2'}},
             ],
         'contacto': {
             'correo': 'eduardo99sosa@gmail.com.com',
