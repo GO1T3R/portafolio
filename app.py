@@ -20,8 +20,8 @@ def home():
             {'titulo': 'Maestria en Analisis e Interpretacion de Datos Digitales', 'institucion': 'Universidad Oriente', 'años': 'Estudiante', 'resumen':'en proceso'} 
         ],
         'cursos':[
-            {'curso':'Python','icono':'/static/icons/python.png', 'acerca':'Complete el curso de Python en Coderhouse, con temas como Django Framework y su MVT basado en Modelos, Vistas y Templates, asi como Git y Github.','año':'2022','instituto':'Coderhouse','certificado':'https://www.coderhouse.com/mx/certificados/62e6b89c998c0900242ccea8?lang='},
-            {'curso': 'JavaScript','icono':'/static/icons/js.png', 'acerca':'Complete el curso de JavaScript en Cordehouse, en donde adquiri conocimiento sobre HTML/CSS y Javascript.', 'año': '2023','instituto':'Coderhouse','certificado':'https://www.coderhouse.com/mx/certificados/64399ef60bc3880002edda34?lang='} 
+            {'curso':'Python','icono':'/static/icons/python.png', 'acerca':'Complete el curso de Python en Coderhouse, con temas como Django Framework y su MVT basado en Modelos, Vistas y Templates, asi como Git y Github.','año':'2022','instituto':'Coderhouse','certificado':'/static/file/Python.png'},
+            {'curso': 'JavaScript','icono':'/static/icons/js.png', 'acerca':'Complete el curso de JavaScript en Cordehouse, en donde adquiri conocimiento sobre HTML/CSS y Javascript.', 'año': '2023','instituto':'Coderhouse','certificado':'/static/file/JS.png'} 
             ],
         'habilidades': [
             {'interpersonales':['Resolución de Problemas','Trabajo en Equipo', 'Autodidacta','Curiosidad']},
