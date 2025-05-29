@@ -141,4 +141,7 @@ a.btn:hover {
     border-color: var(--UI-UX-1); /* Asegura que el borde no cambie */
 }
 
-
+/* Solucion del navbar */
+  [id] {
+    scroll-margin-top: 100px; /* Ajusta este valor según la altura de tu navbar */
+  }
