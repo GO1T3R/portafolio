@@ -8,7 +8,7 @@ def home():
     cv_data = {
         'nombre': 'Eduardo Velazquez Sosa',
         'puesto': 'Aspirante a Data Scientist',
-        'foto':'https://png.pngtree.com/thumb_back/fw800/background/20221108/pngtree-traveler-man-enjoying-by-scenic-of-mountains-person-young-scenics-photo-image_40834320.jpg',
+        'foto':'static/file/perfil.jpg',
         'resumen': 'Egresado de la Ingeniería en Sistemas Computacionales experiencia en análisis estadístico y funciones administrativas en entornos de alta exigencia como el Aeropuerto Internacional de Cancún. Me desempeñé como encargado del área de estadísticas delictivas, desarrollando reportes mensuales y seguimiento de indicadores clave. Con habilidades en Excel, Python y SQL, capacidad para trabajar bajo presión, actitud proactiva y excelente redacción, busco integrarme como Asistente Comercial en una empresa dinámica donde pueda aportar y seguir desarrollándome profesionalmente',
         'experiencia': [
             {'puesto': 'Encargado del Area de Estadisticas / Administrativo', 'empresa': 'Aeropuerto Internacional de Cancun', 'años': '2021-2025'}
@@ -27,7 +27,7 @@ def home():
         ],
         'habilidades': [
             {'interpersonales':['Resolución de Problemas','Trabajo en Equipo', 'Autodidacta','Aprendizaje continuo']},
-            {'tecnicas': ['Python', 'SQL','Excel', 'Pandas', 'Automatización', 'Análisis de Datos', 'Flask']},
+            {'tecnicas': ['Python', 'SQL','Excel','Análisis de Datos', 'Git','Github']},
             {'idiomas':{'Español - Nativo':'','Ingles - En proceso':''}},
             ],
         'contacto': {
