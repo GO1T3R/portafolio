@@ -21,8 +21,7 @@ contourpy==1.2.1
 cryptography==3.4.8
 cycler==0.12.1
 debugpy==1.8.8
-decorator==5.1.1
-Django==5.1.5
+decorator==5.1
 dnspython==2.7.0
 et-xmlfile==1.1.0
 executing==2.1.0
@@ -105,7 +104,6 @@ python-docx==0.8.11
 python-pptx==0.6.23
 python-whois==0.7.3
 pytz==2024.1
-pywin32==308
 pywin32-ctypes==0.2.3
 PyYAML==6.0.2
 pyzmq==26.2.0
